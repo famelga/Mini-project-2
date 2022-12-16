@@ -1,0 +1,85 @@
+:root {
+    --card-header-color: rgb(70, 9, 42);
+    --feature-steps: white;
+    --bg-color: grey;
+   
+
+}
+
+* {
+    background-color: var(--bg-color);
+    box-sizing: border-box;
+    line-height: 2;
+
+
+
+}
+.header {
+    font-size: 20px;
+}
+header,footer,h3 {
+    text-align: center;
+    color: var(--card-header-color)
+
+
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    justify-content: center;
+  }
+  
+
+.card {
+    position: relative;
+    /* flex: 0 0 0;element shrinks to smallest size possible */
+    padding: 10px;
+    text-align: center;
+    border-style: dashed;
+    border-width: 1px;
+    width: 25%;
+    margin: 20px;
+    justify-content: center;
+}
+
+header:hover::after{
+    transition: font-size 4s 1s;
+}
+
+h3 {
+    position: relative;
+    border-style: solid;
+    margin-top: -20px;
+}
+pre {
+    
+    user-select: text;
+    background: linear-gradient(lightpink,violet);
+    color: var(--feature-steps);
+    text-align: left;
+    align-content: flex-start;
+    text-overflow: clip;
+    line-height: 1;
+
+
+}
+
+footer {
+    padding: 30px;
+  }
+
+@media screen and (max-width: 992px) {
+    .card {
+      width: 50%;
+    }
+  }
+  
+  /* Cards are stacked on top of each other at 768px or smaller */
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }
+  
